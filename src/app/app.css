@@ -3,23 +3,23 @@ h1, h2, h3 {
   color: #0056b3; /* A darker blue for headings */
 }
 
-/* Basic styling for the header */
+/* Basic styling for the header 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px; /* Increased padding */
-  background-color: #ffffff; /* White background */
-  border-bottom: 1px solid #e0e0e0; /* Lighter border */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-}
+  padding: 15px 40px;
+  background-color: #ffffff; 
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}*/
 
-/* Placeholder for the logo */
+/* Placeholder for the logo
 header .logo {
   font-size: 1.5em;
   font-weight: bold;
   color: #0056b3;
-}
+} */
 
 /* Styling for the navigation links */
 nav a {
