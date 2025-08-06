@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './ai-services.component.html',
-  styleUrls: ['./ai-services.component.css'],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AiServicesComponent {

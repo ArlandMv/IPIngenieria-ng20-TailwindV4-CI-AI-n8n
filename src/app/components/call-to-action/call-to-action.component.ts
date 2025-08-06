@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './call-to-action.component.html',
-  styleUrls: ['./call-to-action.component.css'],
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CallToActionComponent {
