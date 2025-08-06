@@ -1,0 +1,304 @@
+
+h1, h2, h3 {
+  color: #0056b3; /* A darker blue for headings */
+}
+
+/* Basic styling for the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px; /* Increased padding */
+  background-color: #ffffff; /* White background */
+  border-bottom: 1px solid #e0e0e0; /* Lighter border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Placeholder for the logo */
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* Styling for the navigation links */
+nav a {
+  margin-left: 25px; /* Increased spacing */
+  text-decoration: none;
+  color: #555; /* Medium gray text */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+nav a:hover {
+  color: #007bff; /* Highlight color on hover */
+}
+
+/* Styling for the hero section */
+.hero {
+  text-align: center;
+  padding: 80px 20px; /* More vertical padding */
+  background-color: #e9e9e9; /* Placeholder background color */
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 35px; /* Increased padding */
+  font-size: 1.2em;
+  background-color: #007bff; /* Example call-to-action button color */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for the Problemas que resolvemos section */
+.problemas-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.problemas-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.problema-card {
+  border: 1px solid #e0e0e0; /* Lighter border */
+  padding: 25px; /* Increased padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* More pronounced but softer shadow */
+  background-color: white; /* White background for cards */
+  border-radius: 8px; /* Rounded corners for cards */
+}
+
+/* Styling for the AI Services section */
+.ai-services-section {
+  padding: 60px 20px; /* More vertical padding */
+  background-color: #eef2f7; /* Light blueish background */
+}
+
+.ai-services-list {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+  /* Adjust grid columns for responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.ai-service-item {
+  border: 1px solid #d0d0d0; /* Slightly darker border */
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.ai-service-item h3 {
+  margin-top: 0;
+  color: #007bff; /* Highlight color for service titles */
+}
+
+/* Styling for the Consultoría section */
+.consultoria-section {
+  text-align: center;
+}
+
+.consultoria-cards {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.consultoria-card {
+  border: 1px solid #e0e0e0;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  text-align: left;
+  border-radius: 8px;
+}
+
+/* Styling for the Cómo Funciona section */
+.how-it-works-section {
+  padding: 60px 20px;
+  background-color: #e9e9e9; /* Placeholder background color */
+ text-align: center;
+}
+
+.how-it-works-steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allow steps to wrap on smaller screens */
+}
+
+.how-it-works-step {
+  border: 1px solid #d0d0d0;
+  padding: 25px;
+  background-color: white;
+  border-radius: 8px;
+  flex: 1 1 250px; /* Flex properties for responsiveness */
+}
+
+/* Styling for the Testimonios section */
+.testimonials-section {
+ padding: 60px 20px;
+ text-align: center;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  margin: 30px auto;
+  max-width: 800px; /* Limit quote width for readability */
+  color: #555;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Styling for the Pricing section */
+.pricing-section {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.pricing-table {
+  width: 80%; /* Slightly reduced width */
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-left: auto; /* Center the table */
+  margin-right: auto;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #d0d0d0;
+  padding: 15px;
+}
+
+.pricing-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+  background-color: #f4f7f6; /* Match body background for subtlety */
+}
+
+.pricing-table td:first-child {
+  font-weight: bold;
+}
+
+/* Responsive table */
+/* Add more specific media queries if needed for finer control */
+@media (max-width: 768px) {
+  .pricing-table, .pricing-table thead, .pricing-table tbody, .pricing-table th, .pricing-table td, .pricing-table tr {
+    display: block;
+  }
+  .pricing-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .pricing-table tr { border: 1px solid #ccc; }
+  .pricing-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+  .pricing-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label); /* Use data-label for column header */
+    font-weight: bold;
+  }
+}
+
+/* Styling for the final call-to-action section */
+.cta-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #007bff; /* Use a strong color to grab attention */
+  color: white;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.lead-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lead-form input[type="text"],
+.lead-form input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc; /* Lighter border for input fields */
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.lead-form button {
+  padding: 10px 20px;
+  background-color: #28a745; /* A distinct color for the submit button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+/* Styling for the footer */
+footer {
+  background-color: #333; /* Dark background for the footer */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer .footer-nav a {
+  color: #ccc; /* Lighter color for footer links */
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+footer .social-media a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em; /* Placeholder for social media icons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 10px;
+  }
+  nav { margin-top: 15px; }
+}

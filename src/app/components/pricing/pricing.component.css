@@ -1,0 +1,65 @@
+/* Styling for the Pricing section */
+.pricing-section {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.pricing-table {
+  width: 80%; /* Slightly reduced width */
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-left: auto; /* Center the table */
+  margin-right: auto;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #d0d0d0;
+  padding: 15px;
+}
+
+.pricing-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+  background-color: #f4f7f6; /* Match body background for subtlety */
+}
+
+.pricing-table td:first-child {
+  font-weight: bold;
+}
+
+/* Responsive table */
+/* Add more specific media queries if needed for finer control */
+@media (max-width: 768px) {
+  .pricing-table, .pricing-table thead, .pricing-table tbody, .pricing-table th, .pricing-table td, .pricing-table tr {
+    display: block;
+  }
+  .pricing-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .pricing-table tr { border: 1px solid #ccc; }
+  .pricing-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+  .pricing-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label); /* Use data-label for column header */
+    font-weight: bold;
+  }
+}

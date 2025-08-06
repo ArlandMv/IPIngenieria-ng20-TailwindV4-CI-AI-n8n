@@ -1,0 +1,38 @@
+/* Styling for the final call-to-action section */
+.cta-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #007bff; /* Use a strong color to grab attention */
+  color: white;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.lead-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lead-form input[type="text"],
+.lead-form input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc; /* Lighter border for input fields */
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.lead-form button {
+  padding: 10px 20px;
+  background-color: #28a745; /* A distinct color for the submit button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}

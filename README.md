@@ -1,6 +1,12 @@
-# Myapp
+# IPIngeniería.net Landing Page
+
+This project is a professional, responsive landing page for IPIngeniería.net, a Chilean engineering and IT consulting firm.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+
+## Development Strategy
+
+Our development strategy for this landing page followed an iterative approach, breaking down the project into smaller, manageable components. We adopted a Test-Driven Development (TDD) methodology, writing unit tests for each component before implementing the component's code. This approach helps ensure code quality and maintainability.
 
 ## Development server
 
@@ -28,7 +34,7 @@ ng generate --help
 
 ## Building
 
-To build the project run:
+To build the project for production, use the following command:
 
 ```bash
 ng build
