@@ -52,3 +52,12 @@ Integrates internationalization capabilities to display content in multiple lang
 Implement an i18n library or framework.
 Extract translatable text strings from the application.
 Add a user interface for language switching.
+
+---
+
+IPIngenieria-ng20-TailwindV4-CI-AI-n8n
+
+A modern, standalone Angular 20+ app for IPIngenieria.net, serving the Latin American market with IT, software development, and AI services. Features a responsive design with Tailwind CSS and includes unit tests, e2e testing, and CI setup. It also incorporates a functional contact form with backend automation powered by n8n for seamless integrations.
+
+
+Features a functional contact form with backend automation powered by n8n, enabling seamless integrations with third-party APIs for tasks like sending email notifications, saving data to databases, or connecting with CMSs.
