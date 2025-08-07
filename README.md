@@ -48,6 +48,7 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 
 ```bash
 ng test
+ng test --watch=false --browsers=ChromeHeadlessCI`
 ```
 
 ## Running end-to-end tests

@@ -1,59 +1,47 @@
-# Conventional Commits Rules
+# Rules
 
-This document outlines the rules for creating commit messages based on the Conventional Commits specification. Following these guidelines ensures a clear, readable, and maintainable commit history.
-
-## Commit Message Structure
-
-A commit message should be structured as follows:
-
+Adopt the Trunk-Based Development Workflow for New Work: From now on, whenever you want to add a new feature or fix a bug, you will follow these steps: * Pull the Latest Changes: Always start by pulling the latest changes from the trunk branch to ensure your local is up-to-date:
+```bash
+git pull origin trunk
 ```
-type(scope): subject
 
-body
-
-footer
+*   **Create a Short-Lived Feature/Bugfix Branch:** Create a new branch for your work. Give it a descriptive name (e.g., `feat/contact-form-submission`, `fix/api-error`).
+```bash
+git checkout -b feat/new-feature
 ```
-### Type
 
-The `type` is a mandatory word that describes the nature of the change. It must be one of the following:
+*   **Develop and Commit Locally:** Work on your feature or bug fix on this new branch. Make small, frequent commits with clear messages following your `COMMIT_RULES.md`.
+*   **Push Your Feature Branch (Optional but Recommended):** Regularly push your feature branch to the remote repository. This provides a backup and allows for collaboration if needed (even if you're solo, it's good practice).
+```bash
+git push origin feat/new-feature
+```
 
-*   **feat**: A new feature
-*   **fix**: A bug fix
-*   **docs**: Documentation only changes
-*   **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc.)
-*   **refactor**: A code change that neither fixes a bug nor adds a feature
-*   **perf**: A code change that improves performance
-*   **test**: Adding missing tests or correcting existing tests
-*   **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-*   **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-*   **chore**: Routine tasks, maintenance, or code cleanup that doesn't fit into other categories
 
-### Scope
+*   **Run CI on the Feature Branch (Recommended):** If your CI is configured to run on feature branches, check the CI results to ensure your changes haven't introduced issues before merging to `trunk`.
+*   **Merge into the Trunk:** Once your feature is complete and all tests pass (locally and/or on the feature branch CI), merge your changes into the `trunk` branch.
+    *   Switch back to the `trunk` branch:
 
-The `scope` is an optional phrase providing context for the change. It should be enclosed in parentheses and use lowercase letters. Examples include a component name, a module, or a file path.
+    ```bash
+    git checkout trunk
+    ```
 
-### Subject
+    * Merge your feature branch:
+    ```bash
+    git merge --no-ff feat/new-feature
+    ```
+    (Using `--no-ff` creates a merge commit, which keeps a clearer history of when features were merged.)
+    *   Resolve any merge conflicts that arise.
+*   **Push the Merged Changes to Remote Trunk:**
+```bash
+git push origin trunk
+```
 
-The `subject` is a concise description of the change. It is mandatory and should follow these rules:
+*   **Verify CI on Trunk:** The CI pipeline on GitHub Actions will automatically trigger on this push to `trunk`. **Crucially, wait for this CI build to pass before considering the changes on `trunk` as ready for manual deployment.**
+*   **Delete the Feature Branch (Optional but Recommended):** Once the feature is merged and the CI on `trunk` is successful, you can delete the feature branch locally and remotely:
 
-*   Use imperative, present-tense language (e.g., "add", "change", "fix" instead of "added", "changed", "fixed").
-*   Do not capitalize the first letter.
-*   Do not end with a period.
-*   Keep it brief (ideally 50 characters or less).
-
-### Body
-
-The `body` is an optional, longer description that provides additional context about the change. It should explain the motivation for the change and contrast it with previous behavior.
-
-*   Use imperative, present-tense language.
-*   Wrap lines at 72 characters.
-*   Separate the body from the subject with a blank line.
-
-### Footer
-
-The `footer` is an optional section that can contain information about breaking changes, closed issues, or other metadata.
-
-*   **Breaking Changes**: Indicate breaking changes by starting a paragraph with `BREAKING CHANGE:` followed by a description of the change and the rationale.
-*   **Issue References**: Reference related issues using keywords like `Closes`, `Fixes`, or `Resolves` followed by the issue number (e.g., `Closes #123`).
-
-## Examples of Good Commit Messages
+```bash
+# Delete locally
+git branch -d feat/new-feature
+# Delete remotely
+git push origin --delete feat/new-feature 
+```

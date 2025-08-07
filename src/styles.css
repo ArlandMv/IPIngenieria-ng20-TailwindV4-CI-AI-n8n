@@ -1,2 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+
+  --color-indigo-300: ##A3B3FF;
+  --color-indigo-500: #615FFF;
+  --color-indigo-900: #312C85;
+}
+
+:root {
+  /* Primary Color (Blue) - HSL Base */
+  --primary-hue: 210; /* Hue (0-360) */
+  --primary-saturation: 100%; /* Saturation (0%-100%) */
+
+  /* Generated Shades via Lightness Adjustments */
+  --primary-100: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    95%
+  ); /* Lightest */
+  --primary-300: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    80%
+  ); /* Light */
+  --primary-500: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    60%
+  ); /* Base */
+  --primary-700: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    40%
+  ); /* Dark */
+  --primary-900: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    20%
+  ); /* Darkest */
+
+  /* Utility Colors */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 10%);
+  --gray: hsl(0, 0%, 90%);
+}
+
+/* Components */
+.button {
+  background-color: var(--primary-500);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-700);
+}
+
+.card {
+  background-color: var(--primary-100);
+  border: 1px solid var(--primary-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.alert {
+  background-color: var(--primary-900);
+  color: var(--white);
+  padding: 1rem;
+}
