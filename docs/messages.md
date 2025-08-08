@@ -1,9 +1,18 @@
-docs(blueprint): add future development plans
+feat(ci): set up some unit test examples
+    
+    Set up headless browser and initial unit tests for CI.
+    
+    - Update header component tests
+    - Update hero component tests
+    - Incomplete update to call to action component
 
-Adds a "Future Plans" section to the blueprint.md file outlining potential features for future implementation.
+---
 
-- Includes suggestions for a blog, case studies page, service detail pages, multi-language support, and interactive elements.
-- Provides a brief description and hint of steps for each suggested feature.
+contact form
+
+---
+
+husky
 
 ---
 

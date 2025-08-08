@@ -45,6 +45,10 @@ CI with GitHub Actions: Integrate your tests with GitHub Actions to automaticall
 
 Here are some potential features to consider for future development to enhance the landing page and provide more value:
 
+## Automatic package updates
+*   **Description:** Use fast-facts/ng-update and dependabot to manage angular packages updates.
+*   **Steps Hint:** [HINTS].
+
 ## Blog Section
 
 *   **Description:** Create a blog to share insights, case studies, and company news, improving SEO and demonstrating expertise.

@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ "trunk" ]
+
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Linting
+        run: npm run lint
+
+      - name: Run Unit Tests
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+      
+      - name: Run E2E Tests
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
+
+      - name: Build for Production
+        run: npm run build -- --configuration production
+      
+      - name: Deploy to Web Server
+        uses: easingthemes/ssh-deploy@v5.0.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          SOURCE: "dist/your-project-name/"
+          EXCLUDE: "/.git/, /node_modules/"

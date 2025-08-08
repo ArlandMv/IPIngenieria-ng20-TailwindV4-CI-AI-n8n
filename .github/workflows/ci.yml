@@ -2,27 +2,32 @@ name: CI
 
 on:
   push:
-    branches:
-      - trunk
+    branches: [ "trunk" ]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [20]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # Or your desired Node.js version
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build application
-        run: npm run build --prod
+      - name: Run Linting
+        run: npm run lint
 
-      - name: Run tests
-        run: npm run test --watch=false # Assuming you have a test script
+      - name: Run Unit Tests
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
