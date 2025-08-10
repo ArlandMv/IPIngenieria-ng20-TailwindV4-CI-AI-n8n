@@ -1,7 +1,7 @@
 # Components to Update
 
-- Header - 
-- Hero - 
+- Header - SUCCESS
+- Hero - SUCCESS
 - Problemas - 
 - AI Services - 
 - Consultoria - 

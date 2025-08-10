@@ -11,6 +11,7 @@ import { HowItWorksComponent } from "./components/how-it-works/how-it-works.comp
 import { ConsultoriaComponent } from "./components/consultoria/consultoria.component";
 import { AiServicesComponent } from "./components/ai-services/ai-services.component";
 import { CallToActionComponent } from "./components/call-to-action/call-to-action.component";
+import { ContactForm } from "./components/contact-form/contact-form";
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,8 @@ import { CallToActionComponent } from "./components/call-to-action/call-to-actio
     HowItWorksComponent,
     ConsultoriaComponent,
     AiServicesComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    ContactForm
 ],
   templateUrl: './app.html',
   styleUrl: './app.css',

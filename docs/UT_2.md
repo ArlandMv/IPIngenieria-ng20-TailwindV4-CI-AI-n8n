@@ -1,0 +1,1 @@
+Use components list to Review the html of each component of the list(the ones that have not being worked on), second redo the relevant unit test for it and lastly run the npm run test command , comment if it was succesfull or not in the same file and continue with the next component of the list

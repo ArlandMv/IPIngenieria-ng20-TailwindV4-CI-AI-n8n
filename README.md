@@ -49,16 +49,17 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ```bash
 ng test
 ng test --no-watch --no-progress --browsers=ChromeHeadless
-
 ```
 **note:** for running tests in firebase studio we will to run the following commands:
 which chromium
 export CHROME_BIN=$(which chromium)
 echo "CHROME_BIN=${CHROME_BIN}"
 
-"options": {
-    "karmaConfig": "karma.conf.js", //this
 
+```bash
+export CHROME_BIN=$(which chromium)
+npm run test
+```
 
 ## Running end-to-end tests
 
