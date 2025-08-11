@@ -28,7 +28,6 @@ import { ContactForm } from "./components/contact-form/contact-form";
     HowItWorksComponent,
     ConsultoriaComponent,
     AiServicesComponent,
-    CallToActionComponent,
     ContactForm
 ],
   templateUrl: './app.html',

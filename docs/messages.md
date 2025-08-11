@@ -6,13 +6,18 @@ feat(ci): set up some unit test examples
     - Update hero component tests
     - Incomplete update to call to action component
 
----
+--- ACTUAL
 
 contact form
 
----
+--- FUTURE
 
-husky
+ngx-toastr + HTML5 Audio or Howler.js
+
+---
+feat(send email): integrate emailjs
+
+https://libraries.io/npm/emailjs
 
 ---
 
