@@ -16,6 +16,9 @@ feat(contact-form): add validations &  notifications
 -Integrate audio notification and SweetAlert2 for success feedback on submission.
 
 --- ACTUAL
+feat(contact-form): implement basic error alerts with styles
+
+---
 
 send mail to info@ipingenieria.net
 https://youtu.be/r4RQ38EoLds?si=0BcnIWy3sDlTWWOu
