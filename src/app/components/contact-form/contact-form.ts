@@ -30,7 +30,6 @@ export class ContactForm {
         position: "top-end",
         icon: "success",
         title: "Solicitud enviada con Exito",
-        draggable: true,
         showConfirmButton: false,
         timer: 1500
       });

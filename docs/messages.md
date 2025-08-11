@@ -6,16 +6,30 @@ feat(ci): set up some unit test examples
     - Update hero component tests
     - Incomplete update to call to action component
 
---- ACTUAL
+--- 
 
 contact form
 
+feat(contact-form): add validations &  notifications
+
+-Implement a basic contact form with client-side validation using Reactive Forms.
+-Integrate audio notification and SweetAlert2 for success feedback on submission.
+
+--- ACTUAL
+
+send mail to info@ipingenieria.net
+https://youtu.be/r4RQ38EoLds?si=0BcnIWy3sDlTWWOu
+
+alternative brevo for marketing.
+https://www.brevo.com/es/pricing/marketing-platform/see-all-features/
+
 --- FUTURE
 
-ngx-toastr + HTML5 Audio or Howler.js
+format(contact-form): updated fields
 
----
-feat(send email): integrate emailjs
+--- 
+
+feat(email-service): integrate emailjs
 
 https://libraries.io/npm/emailjs
 

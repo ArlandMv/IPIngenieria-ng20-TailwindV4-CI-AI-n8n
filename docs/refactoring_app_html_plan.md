@@ -1,21 +1,15 @@
 # Brainstorming: Refactoring app.html
 
-*   Break down the large `app.html` file into smaller, focused Angular components.
-*   Create a component for each major section of the landing page (e.g., Header, Hero, Problemas, Services, etc.).
-*   Use standalone components for better encapsulation and easier integration.
-*   Improve code organization and maintainability by grouping related files.
-*   Enhance readability and collaboration among developers.
-*   Prepare the application for potential future features and scaling by creating a modular base.
-*   Define clear inputs and outputs for components where necessary (though for a landing page, many might be presentational).
+## Analyze and compare refactoring alternatives by components(e.g., Header, Hero, Problemas, Services, etc.) vs functional elements or some more relevant naming convention refering to page-content, page-menu, contact-form, sign-in-modal.  
 
 # Product Plan: Refactoring IPIngeniería.net Landing Page HTML Structure
 
-**Goal:** To refactor the monolithic `app.html` file into a professional and maintainable Angular component structure, improving code organization, readability, and reusability.
+**Goal:** To refactor `app.html` from a maintainable Angular with component structure, improving code organization, readability, and reusability to _____
 
 **Proposed File Structure:**
 
-*   Create a dedicated folder for each major section of the landing page within `src/app/components`.
-*   Each section folder will contain the component's TypeScript (`.ts`), HTML (`.html`), and CSS (`.css`) files.
+*   Create a ...
+*   Each will contain the component's TypeScript (`.ts`), HTML (`.html`), and CSS (`.css`) files.
 *   All new components will be standalone, promoting modularity.
 
 ```
