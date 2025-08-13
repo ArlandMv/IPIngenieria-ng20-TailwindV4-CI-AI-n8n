@@ -16,7 +16,17 @@ feat(contact-form): add validations &  notifications
 -Integrate audio notification and SweetAlert2 for success feedback on submission.
 
 --- ACTUAL
-feat(contact-form): implement basic error alerts with styles
+feat(contact-form): implement emailjs & update contact form 
+
+Integrates EmailJS Service for sending contact form submissions and update the contact form.
+
+- Use environment variables for EmailJS keys.
+- Adds loading/error state handling and form reset.
+- Adds new fields subject and phone with validators (need testing).
+
+---
+
+refactor(contact-form): Enhance contact form 
 
 ---
 

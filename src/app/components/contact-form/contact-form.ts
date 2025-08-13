@@ -19,7 +19,7 @@ export class ContactForm {
   private emailService = inject(Email);
   //private fb = inject(FormBuilder);
   contactForm: FormGroup = inject(FormBuilder).group({
-    name: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50)]],
+    name: ['', [Validators.required,Validators.minLength(3)]], //Validators.maxLength(50)
     email: ['', [Validators.required, Validators.email]],
     subject: ['', Validators.required],
     //phone: ['', [Validators.required, Validators.pattern('^[0-9+\\-()\\s]+$')]],
