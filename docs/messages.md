@@ -25,6 +25,11 @@ Integrates EmailJS Service for sending contact form submissions and update the c
 - Adds new fields subject and phone with validators (need testing).
 
 ---
+docs: Add GitHub Actions workflow report and clean up old docs
+
+Adds a comprehensive report on suggested GitHub Actions workflows for CI/CD.
+Removes outdated documentation files from the docs directory.
+---
 
 refactor(contact-form): Enhance contact form 
 
