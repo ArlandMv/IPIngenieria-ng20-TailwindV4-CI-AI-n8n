@@ -6,13 +6,50 @@ feat(ci): set up some unit test examples
     - Update hero component tests
     - Incomplete update to call to action component
 
----
+--- 
 
 contact form
 
+feat(contact-form): add validations &  notifications
+
+-Implement a basic contact form with client-side validation using Reactive Forms.
+-Integrate audio notification and SweetAlert2 for success feedback on submission.
+
+--- ACTUAL
+feat(contact-form): implement emailjs & update contact form 
+
+Integrates EmailJS Service for sending contact form submissions and update the contact form.
+
+- Use environment variables for EmailJS keys.
+- Adds loading/error state handling and form reset.
+- Adds new fields subject and phone with validators (need testing).
+
+---
+docs: Add GitHub Actions workflow report and clean up old docs
+
+Adds a comprehensive report on suggested GitHub Actions workflows for CI/CD.
+Removes outdated documentation files from the docs directory.
 ---
 
-husky
+refactor(contact-form): Enhance contact form 
+
+---
+
+send mail to info@ipingenieria.net
+https://youtu.be/r4RQ38EoLds?si=0BcnIWy3sDlTWWOu
+
+alternative brevo for marketing.
+https://www.brevo.com/es/pricing/marketing-platform/see-all-features/
+
+--- FUTURE
+
+format(contact-form): updated fields
+
+--- 
+
+feat(email-service): integrate emailjs
+
+https://libraries.io/npm/emailjs
 
 ---
 

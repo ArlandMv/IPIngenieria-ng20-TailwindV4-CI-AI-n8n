@@ -49,16 +49,17 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ```bash
 ng test
 ng test --no-watch --no-progress --browsers=ChromeHeadless
-
 ```
 **note:** for running tests in firebase studio we will to run the following commands:
 which chromium
 export CHROME_BIN=$(which chromium)
 echo "CHROME_BIN=${CHROME_BIN}"
 
-"options": {
-    "karmaConfig": "karma.conf.js", //this
 
+```bash
+export CHROME_BIN=$(which chromium)
+npm run test
+```
 
 ## Running end-to-end tests
 
@@ -73,3 +74,20 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Acknowledgments
+
+The notification sound used in this application is from <a href="https://freesound.org/people/Joao_Janz/sounds/504849/">Vintage Alert Notification 1_2</a> by <a href="https://freesound.org/people/Joao_Janz/">Joao_Janz</a> | License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>
+
+
+
+
+
+<!--
+https://npm-compare.com/html2pdf.js,jspdf,pdfmake
+
+TOOLTIPS
+native alternative https://youtu.be/GJnICmQ87AM?si=LzNw-8GBWGH4oJX0
+popover api https://youtu.be/0_wgyB64a8I?si=v2T3oEerF-i2QdIX
+npm packets https://npm-compare.com/ng2-tooltip-directive,ngx-tippy-wrapper,ngx-tooltip/#timeRange=ALL
+-->
