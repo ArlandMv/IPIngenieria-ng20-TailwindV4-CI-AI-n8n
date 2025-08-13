@@ -1,39 +1,77 @@
-import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, signal, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators,  } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Email } from '../../services/email';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.css'
 })
+// TODO:
+// - Implement loading and error handling.
+// - Add more advanced form validation.
+// - Improve the accessibility of the form.
 export class ContactForm {
-  // TODO:
-  // - Create a service for the API call.
-  // - Implement loading and error handling.
-  // - Add more advanced form validation.
-  // - Improve the accessibility of the form.
-
+  private emailService = inject(Email);
+  //private fb = inject(FormBuilder);
   contactForm: FormGroup = inject(FormBuilder).group({
+    name: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50)]],
+    email: ['', [Validators.required, Validators.email]],
+    subject: ['', Validators.required],
+    //phone: ['', [Validators.required, Validators.pattern('^[0-9+\\-()\\s]+$')]],
+    phone: ['', Validators.required],
+    message: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(300)]]
+  });
+  private audio = new Audio('notification.wav'); 
+
+  /*
+  contactForm = this.fb.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
-    message: ['', Validators.required]
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
   });
+  */
+
+  
+  public loading = signal(false);
+  public error = signal<string | null>(null);
+
+
   onSubmit() {
     if (this.contactForm.valid) {
-      // Here you could send the data to your API
-      console.log('Form submitted:', this.contactForm.value);
-      const audio = new Audio('notification.wav'); 
-      audio.play();
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Solicitud enviada con Exito",
-        showConfirmButton: false,
-        timer: 1500
+      this.loading.set(true);
+      this.error.set(null);
+
+      // preparing to send the data to the API service
+      const formData = this.contactForm.value;
+      console.log('Form being submitted:', this.contactForm.value);
+      this.emailService.sendContactForm(formData)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        this.loading.set(false);
+        this.audio.play();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Solicitud enviada con Exito",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        this.contactForm.reset();
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        this.loading.set(false);
+        this.error.set('Error sending email. Please try again later.');
       });
-      this.contactForm.reset();
+    } else {
+      //this code should be unreachable beacuse of form validation
+      this.error.set('Please fill in all required fields.');
     }
   }
 }
