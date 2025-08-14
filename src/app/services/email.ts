@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { environment } from '../../environments/environment';
 
+/*
 export interface EmailParams {
   name: string;
   email: string;
   subject: string;
   phone: string;
   message: string;
-}
+}*/
 
 @Injectable({
   providedIn: 'root'

@@ -25,7 +25,6 @@ export class ContactForm {
     phone: ['', Validators.required],
     message: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(300)]]
   });
-  private audio = new Audio('notification.wav'); 
 
   /*
   contactForm = this.fb.group({
@@ -53,7 +52,8 @@ export class ContactForm {
       .then((response) => {
         console.log('Email sent successfully:', response);
         this.loading.set(false);
-        this.audio.play();
+        const audio = new Audio('notification.wav');
+        audio.play();
         Swal.fire({
           position: "top-end",
           icon: "success",
