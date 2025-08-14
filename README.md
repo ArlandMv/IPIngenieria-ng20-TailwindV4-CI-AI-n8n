@@ -79,9 +79,16 @@ For more information on using the Angular CLI, including detailed command refere
 
 The notification sound used in this application is from <a href="https://freesound.org/people/Joao_Janz/sounds/504849/">Vintage Alert Notification 1_2</a> by <a href="https://freesound.org/people/Joao_Janz/">Joao_Janz</a> | License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>
 
+## Future updates
 
+Switch sweetalert for ngx-sweetalert2 to use ESM and treeshaking or try dynamic imports(lazyload)
 
-
+```typescript
+async showAlert() {
+  const Swal = await import('sweetalert2');
+  Swal.fire({ ... });
+}
+```
 
 <!--
 https://npm-compare.com/html2pdf.js,jspdf,pdfmake

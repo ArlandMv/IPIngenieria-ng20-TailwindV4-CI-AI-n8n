@@ -2,28 +2,35 @@ import { Injectable } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { environment } from '../../environments/environment';
 
+export interface EmailParams {
+  name: string;
+  email: string;
+  subject: string;
+  phone: string;
+  message: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class Email {
   private readonly SERVICE_ID = environment.emailjs.serviceId;
   private readonly TEMPLATE_ID = environment.emailjs.templateId;
-  private readonly USER_ID = environment.emailjs.userId; 
   private readonly PUBLIC_KEY = environment.emailjs.publicKey; 
   
   constructor() {
     emailjs.init(this.PUBLIC_KEY);
-    // test it, it should run once
   }
 
-  /* INTERFASE
-  var templateParams = { 
-    name: 'James',
-    notes: 'Check this out!',
-  };*/
 
-  // Wrapper method for sending email
-  async sendContactForm(params: any): Promise<EmailJSResponseStatus> {
+  /**
+   * Sends a contact form email using EmailJS.
+   *
+   * @param params - The parameters for the email, conforming to the EmailParams interface.
+   * @returns A promise that resolves with the EmailJS response status upon successful sending.
+   * @throws An error if the email sending fails.
+   */
+  async sendContactForm(params: Record<string, unknown>): Promise<EmailJSResponseStatus> {
     try {
       const response = await emailjs.send(
         this.SERVICE_ID,
@@ -36,15 +43,6 @@ export class Email {
       console.error('Failed to send email:', error);
       throw error; // Re-throw to be handled by the component
     }
-  }
-
-  //"simpler" way
-  simplerSendContactForm(params: any): Promise<EmailJSResponseStatus> {
-    return emailjs.send(
-      this.SERVICE_ID,
-      this.TEMPLATE_ID,
-      params
-    );
   }
 }
 

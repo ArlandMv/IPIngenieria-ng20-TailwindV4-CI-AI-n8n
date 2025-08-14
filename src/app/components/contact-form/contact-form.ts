@@ -12,8 +12,7 @@ import { Email } from '../../services/email';
   styleUrl: './contact-form.css'
 })
 // TODO:
-// - Implement loading and error handling.
-// - Add more advanced form validation.
+// - Improve loading and error handling.
 // - Improve the accessibility of the form.
 export class ContactForm {
   private emailService = inject(Email);

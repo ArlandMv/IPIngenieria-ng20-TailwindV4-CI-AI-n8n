@@ -3,15 +3,15 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { HeaderComponent } from "./components/header/header.component";
 import { HeroComponent } from "./components/hero/hero.component";
 import { ProblemasComponent } from "./components/problemas/problemas.component";
-//import { CallToActionComponent } from "./components/call-to-action/call-to-action.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { PricingComponent } from "./components/pricing/pricing.component";
 import { Testimonials } from './components/testimonials/testimonials';
 import { HowItWorksComponent } from "./components/how-it-works/how-it-works.component";
 import { ConsultoriaComponent } from "./components/consultoria/consultoria.component";
 import { AiServicesComponent } from "./components/ai-services/ai-services.component";
-import { CallToActionComponent } from "./components/call-to-action/call-to-action.component";
 import { ContactForm } from "./components/contact-form/contact-form";
+
+//import { CallToActionComponent } from "./components/call-to-action/call-to-action.component";
 
 @Component({
   selector: 'app-root',
