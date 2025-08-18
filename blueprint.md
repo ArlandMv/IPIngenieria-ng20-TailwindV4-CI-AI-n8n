@@ -1,15 +1,13 @@
 # Project Overview
 
-[Provide a concise overview of the project's purpose and capabilities.]
-This project is a landing page for IPIngeniería.net, a company offering services related to IT, Software Development, Artificial Intelligence and consulting for those 3 services. The landing page is designed for small and medium-sized enterprises (PYMEs) in Latin America. The page highlights the company's offerings, the problems they solve, their work process, customer testimonials, support plans, and contact information.
+This project is a landing page for IPIngeniería.net, a company offering services related to IT, Software Development, Artificial Intelligence and consulting for those 3 services. The landing page is designed for small and medium-sized enterprises (PYMEs) in Latin America. The page highlights the company's offerings, the problems they solve, their work process, customer testimonials, support plans, and contact form for users to request more information.
 
 
 # Implemented Features
 
-[Detail the style, design, and features implemented so far.]
-style:
-design:
-features: Contact Form.
+Style: Tailwind CSS  <!--light/dark mode-->
+Design: SPA Single Page Application
+Features: Contact Form.
 
 The landing page currently includes the following sections, styled with Tailwind CSS:
 
@@ -30,20 +28,34 @@ The landing page currently includes the following sections, styled with Tailwind
 *   **Footer:** Contains company logo, description, social media links (LinkedIn, Twitter, GitHub), and navigation links to services and company information.
 
 
-# Current Plan: Update Components in app.html
+# Current Plan: Update Services
 
-Implement Contact Form Functionality: Make the "Solicitar Información" form actually work. This involves:
-Creating a service to handle form submissions (e.g., sending data to a backend endpoint or a third-party service like Formspree or Netlify Forms).
-Adding form validation to ensure the user provides necessary information.
-Providing user feedback upon successful submission or errors.
-Set up Automated Tests:
-Unit Tests: Write unit tests for your services and components to ensure individual parts of your application work correctly in isolation.
-End-to-End (E2E) Tests: Set up E2E tests to simulate user interactions and verify that the entire application flows as expected. This is especially important for the contact form to ensure submissions work correctly.
-CI with GitHub Actions: Integrate your tests with GitHub Actions to automatically run tests whenever you push changes to your repository. This helps catch bugs early in the development process.
+The landing page currently includes the following services, structured into three main categories:
+
+## IT Services
+*   Consultoría IT
+*   Infraestructura
+*   Seguridad & Redes
+*   Modernización tecnológica
+
+## Web Development
+*   Sitios web modernos
+*   E-commerce
+*   Plataformas digitales
+*   Optimización UX/UI
+
+## Artificial Intelligence Solutions
+*   Generative AI Integrations
+*   OCR & File AI
+*   AI Strategy & Consulting
+*   API & CRM Integrations
+*   Custom Chatbots & Automations (LLMs + RAG)
 
 # Future Plans
 
 Here are some potential features to consider for future development to enhance the landing page and provide more value:
+
+<!--Style: Tailwind CSS light/dark mode-->
 
 ## Automatic package updates
 *   **Description:** Use fast-facts/ng-update and dependabot to manage angular packages updates.

@@ -8,6 +8,41 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 Our development strategy for this landing page followed an iterative approach, breaking down the project into smaller, manageable components. We adopted a Test-Driven Development (TDD) methodology, writing unit tests for each component before implementing the component's code. This approach helps ensure code quality and maintainability.
 
+## Technologies Used
+
+This project is built using the following technologies:
+
+*   **Framework:** Angular 20+ - A powerful platform for building modern web applications.
+*   **Language:** TypeScript - A typed superset of JavaScript that enhances code quality and maintainability.
+*   **Styling:** Tailwind CSS - A utility-first CSS framework that enables rapid and efficient styling.
+*   **Reactive Programming:** RxJS - A library for handling asynchronous data streams with observables.
+*   **UI Components:** SweetAlert2 - Provides beautiful, customizable, and accessible popup messages for user interactions.
+*   **Email Services:** EmailJS - Allows sending emails directly from the browser without a backend server.
+*   **Unit Testing:** Jasmine & Karma - A combination of a testing framework and a test runner for comprehensive unit tests.
+*   **E2E Testing Setup:** Puppeteer - A Node.js library used in the setup for end-to-end testing by providing control over Chrome or Chromium.
+
+graph BT
+    A[Angular 20+] --> B[TypeScript]
+    A --> C[RxJS]
+    A --> D[Tailwind CSS]
+    A --> E[Karma/Jasmine]
+    
+    F[EmailJS] --> G[Gmail API]
+    H[Puppeteer] --> I[End-to-End Testing]
+    
+    D --> J[Responsive Design]
+    C --> K[Reactive Forms]
+    E --> L[Unit Coverage]
+    
+    classDef tech fill:#4f46e5,stroke:#6366f1,color:white
+    classDef service fill:#10b981,stroke:#059669
+    classDef result fill:#f59e0b,stroke:#d97706
+    
+    class A,B,C,D,E tech
+    class F,G,H service
+    class J,K,L result
+    
+
 ## Development server
 
 To start a local development server, run:
