@@ -10,6 +10,7 @@ import { HowItWorksComponent } from "./components/how-it-works/how-it-works.comp
 import { ConsultoriaComponent } from "./components/consultoria/consultoria.component";
 import { AiServicesComponent } from "./components/ai-services/ai-services.component";
 import { ContactForm } from "./components/contact-form/contact-form";
+import { Clients } from "./components/clients/clients";
 
 //import { CallToActionComponent } from "./components/call-to-action/call-to-action.component";
 
@@ -28,7 +29,8 @@ import { ContactForm } from "./components/contact-form/contact-form";
     HowItWorksComponent,
     ConsultoriaComponent,
     AiServicesComponent,
-    ContactForm
+    ContactForm,
+    Clients
 ],
   templateUrl: './app.html',
   styleUrl: './app.css',

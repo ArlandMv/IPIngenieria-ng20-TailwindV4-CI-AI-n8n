@@ -1,12 +1,17 @@
 # Components to Update
 
-- Header - SUCCESS
-- Hero - SUCCESS
-- Problemas - 
-- AI Services - 
-- Consultoria - 
-- How It Works - 
-- Testimonials  - 
-- Pricing  - 
-- Call to Action Form -
-- Footer - 
+- Header 
+   - Linkfix Contacto full center   - (low)
+   - reactive links                 - (low)
+- Hero - fix background + changing h1 - (low) 
+- Problemas - reword                  - (low) 
+- Clients - fix puntoit               - (low) 
+- Consultoria 
+    - Servicios Consultoria 
+    - no circles - (low) 
+- AI Services - SHOULD REACT TO CONSULTATION SERVCICES
+- How It Works - SHOULD BE DONE
+- Testimonials - GET THEM  
+- Pricing  - fix buttons 
+- Contact Form -
+- Footer - fix links
