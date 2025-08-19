@@ -63,11 +63,15 @@ h2 {
 }
 
 h3 {
-  @apply text-2xl font-bold text-gray-900 mb-3 dark:text-white
+  @apply text-2xl lg:text-3xl font-bold text-gray-900 mb-3 dark:text-white
 } 
 
+h4 {
+  @apply text-xl lg:text-2xl font-bold text-gray-900 mb-4 dark:text-white;
+}
+
 .icon-container {
-  @apply w-16 h-auto py-4 bg-primary-500 dark:bg-primary-400 rounded-xl items-center justify-center flex;
+  @apply w-16 h-16 py-4 bg-primary-500 dark:bg-primary-400 rounded-xl items-center justify-center flex;
 }
 
 /* Components */
