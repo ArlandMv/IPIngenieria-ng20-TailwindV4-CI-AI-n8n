@@ -12,6 +12,7 @@ import { AiServicesComponent } from "./components/ai-services/ai-services.compon
 import { ContactForm } from "./components/contact-form/contact-form";
 import { Clients } from "./components/clients/clients";
 import { ServicesIt } from "./components/services-it/services-it";
+import { Testimonials2 } from "./components/testimonials2/testimonials2";
 
 //import { CallToActionComponent } from "./components/call-to-action/call-to-action.component";
 
@@ -32,7 +33,8 @@ import { ServicesIt } from "./components/services-it/services-it";
     AiServicesComponent,
     ContactForm,
     Clients,
-    ServicesIt
+    ServicesIt,
+    Testimonials2
 ],
   templateUrl: './app.html',
   styleUrl: './app.css',

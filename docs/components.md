@@ -12,12 +12,19 @@
     - Servicios Consultoria 
     - no circles - (low) 
 - AI Services 
-    - SHOULD REACT TO CONSULTATION SERVCICES
-    - fix styles last srevice
+    - fix bulletpoints with SVGs
+    - fix styles last service
 - How It Works - SHOULD BE DONE
 - Testimonials - GET THEM  
 - Pricing  - fix buttons 
-- Contact Form -
+- Contact Form - make reactive
 - Footer - fix links
 
-TODO: USE SEMANTIC TAGS WHEN POSSIBLE USING AI
+# TODO: 
+- USE SEMANTIC TAGS WHEN POSSIBLE USING AI
+- Favicon
+- SEO
+
+# used prompt
+
+ok next review our changes using git to analyze the staged and not staged changes then suggest 3 unique messages that follow the commit rules
