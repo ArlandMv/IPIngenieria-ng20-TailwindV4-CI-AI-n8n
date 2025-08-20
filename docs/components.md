@@ -14,16 +14,32 @@
 - AI Services 
     - fix bulletpoints with SVGs
     - fix styles last service
-- How It Works - SHOULD BE DONE
+- How It Works - FIX "Optimización con IA"
 - Testimonials - GET THEM  
 - Pricing  - fix buttons 
 - Contact Form - make reactive
 - Footer - fix links
 
-# TODO: 
-- USE SEMANTIC TAGS WHEN POSSIBLE USING AI
-- Favicon
-- SEO
+# TODOs to rank: 
+
+## PRIMARY
+    -FIX MOBILE NAV
+
+
+## SECUNDARY
+    - USE SEMANTIC TAGS WHEN POSSIBLE USING AI
+    - Favicon
+    - SEO
+
+
+
+
+
+
+
+
+
+
 
 # used prompt
 
