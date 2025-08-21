@@ -14,6 +14,9 @@ import { Testimonials2 } from './components/testimonials2/testimonials2';
 import { About } from './components/about/about';
 import { FooterComponent } from './components/footer/footer.component';
 import { Services } from "./components/services/services";
+import { ConsultingServices } from "./components/consulting-services/consulting-services";
+import { HowWeHelp } from "./components/how-we-help/how-we-help";
+import { Testimonials3 } from "./components/testimonials3/testimonials3";
 
 @Component({
   selector: 'app-root',
@@ -34,7 +37,10 @@ import { Services } from "./components/services/services";
     ContactForm,
     FooterComponent,
     About,
-    Services
+    Services,
+    ConsultingServices,
+    HowWeHelp,
+    Testimonials3
 ],
   templateUrl: './app.html',
   styleUrl: './app.css',

@@ -16,14 +16,15 @@
     - fix styles last service
 - How It Works - FIX "Optimización con IA"
 - Testimonials - GET THEM  
-- Pricing  - fix buttons 
+
 - Contact Form - make reactive
-- Footer - fix links
+- Footer - review links
 
 # TODOs to rank: 
 
 ## PRIMARY
     -FIX MOBILE NAV
+    -FIX STYLES PER COMPONENT TO BE LIKE HERO
 
 
 ## SECUNDARY
@@ -40,7 +41,7 @@
 ng lint
 
 npx prettier --write src/main.ts
- 
+
 
 # used prompt
 

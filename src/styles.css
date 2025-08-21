@@ -71,7 +71,7 @@ h4 {
 }
 
 .icon-container {
-  @apply w-16 h-16 py-4 bg-primary-500 dark:bg-primary-400 rounded-xl items-center justify-center flex;
+  @apply w-16 h-16 py-4 bg-primary-500 dark:bg-primary-600 rounded-xl items-center justify-center flex;
 }
 
 /* Components */
