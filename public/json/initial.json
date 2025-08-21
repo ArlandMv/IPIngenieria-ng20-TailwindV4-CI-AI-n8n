@@ -1,108 +1,131 @@
 {
-    "header_menu": {
-      "company_name": "IPIngeniería.cl",
-      "navigation": ["Servicios", "Consultoría", "Clientes", "Contacto", "Solicitar Evaluación Gratuita"]
-    },
-    "hero_section": {
-      "title": "Conectividad y Soporte TI que Garantizan Continuidad",
-      "tagline": "Soluciones confiables de infraestructura tecnológica para empresas en crecimiento",
-      "cta_buttons": ["Solicitar Cotización", "Solicitar Evaluación Gratuita"]
-    },
-    "about_value_proposition": {
-      "headline": "Quiénes Somos",
-      "text": "En IPIngeniería conectamos a las empresas con soluciones tecnológicas confiables y un soporte continuo que asegura la continuidad operativa y la seguridad de sus sistemas."
-    },
-    "services": {
-      "it_services": {
-        "infraestructura_redes": {
-          "title": "Infraestructura & Redes Confiables",
-          "items": [
-            "Enlaces inalámbricos de alta velocidad para comunicación estable incluso a larga distancia.",
-            "Redes LAN y WAN corporativas, adaptadas a las necesidades de PYMEs y grandes empresas.",
-            "WiFi empresarial con roaming, diseñado para mantener equipos conectados sin interrupciones.",
-            "Telefonía IP moderna con menor costo y mayor flexibilidad."
-          ]
-        },
-        "seguridad_control": {
-          "title": "Seguridad & Control Inteligente",
-          "items": [
-            "CCTV inteligente con monitoreo centralizado.",
-            "Control de Acceso (CACC) para oficinas, plantas y edificios.",
-            "Integración CACC + CCTV con reconocimiento facial y de patentes."
-          ]
-        },
-        "administracion_monitoreo": {
-          "title": "Administración & Monitoreo Continuo",
-          "items": [
-            "Administración de servidores, estaciones de trabajo y servicios virtuales.",
-            "Monitoreo de recursos críticos: calderas, bombas, iluminación, riego, entre otros.",
-            "Soporte preventivo y correctivo, asegurando continuidad y minimizando riesgos."
-          ]
-        },
-        "soluciones_integradas": {
-          "title": "Soluciones Integradas para Comunidades & Empresas",
-          "items": [
-            "Conectividad centralizada para múltiples servicios: agua potable, dispensadores, coworking, lavandería.",
-            "Administración de aplicaciones en red local, optimizando el uso compartido de recursos.",
-            "Citofonía IP y WiFi comunal, comunicación y conectividad para todos los usuarios."
-          ]
-        }
-      },
-      "consulting_services": {
-        "title": "Consultoría Estratégica",
+  "section_header_menu": {
+    "title_header_menu": "Header Menu",
+    "company_name_header_menu": "IPIngeniería.cl",
+    "navigation_header_menu": [
+      "Servicios",
+      "Consultoría",
+      "Clientes",
+      "Contacto",
+      "Solicitar Evaluación Gratuita"
+    ]
+  },
+  "section_hero": {
+    "title_hero": "Conectividad y Soporte TI que Garantizan Continuidad",
+    "tagline_hero": "Soluciones confiables de infraestructura tecnológica para empresas en crecimiento",
+    "cta_buttons_hero": [
+      "Solicitar Cotización",
+      "Solicitar Evaluación Gratuita"
+    ]
+  },
+  "section_about": {
+    "title_about": "Quiénes Somos",
+    "description_about": "En IPIngeniería conectamos a las empresas con soluciones tecnológicas confiables y un soporte continuo que asegura la continuidad operativa y la seguridad de sus sistemas."
+  },
+  "section_services": {
+    "title_services": "Servicios",
+    "list_services": {
+      "infraestructura_redes": {
+        "title": "Infraestructura & Redes Confiables",
         "items": [
-          "Soluciones Web: desarrollo y optimización de sitios y plataformas digitales.",
-          "IoT: integración de dispositivos inteligentes para monitoreo y eficiencia.",
-          "Inteligencia Artificial: asesoría en adopción gradual de IA para procesos clave."
+          "Enlaces inalámbricos de alta velocidad para comunicación estable incluso a larga distancia.",
+          "Redes LAN y WAN corporativas, adaptadas a las necesidades de PYMEs y grandes empresas.",
+          "WiFi empresarial con roaming, diseñado para mantener equipos conectados sin interrupciones.",
+          "Telefonía IP moderna con menor costo y mayor flexibilidad."
+        ]
+      },
+      "seguridad_control": {
+        "title": "Seguridad & Control de ultima generacion",
+        "items": [
+          "CCTV inteligente con monitoreo centralizado.",
+          "Control de Acceso (CACC) para oficinas, plantas y edificios.",
+          "Integración CACC + CCTV con reconocimiento facial y de patentes."
+        ]
+      },
+      "administracion_monitoreo": {
+        "title": "Administración & Monitoreo Continuo",
+        "items": [
+          "Administración de servidores, estaciones de trabajo y servicios virtuales.",
+          "Monitoreo de recursos críticos: calderas, bombas, iluminación, riego, entre otros.",
+          "Soporte preventivo y correctivo, asegurando continuidad y minimizando riesgos."
+        ]
+      },
+      "soluciones_integradas": {
+        "title": "Soluciones Integradas para Comunidades & Empresas",
+        "items": [
+          "Conectividad centralizada para múltiples servicios: agua potable, dispensadores, coworking, lavandería.",
+          "Administración de aplicaciones en red local, optimizando el uso compartido de recursos.",
+          "Citofonía IP y WiFi comunal, comunicación y conectividad para todos los usuarios."
         ]
       }
     },
-    "how_we_help": {
-      "title": "Cómo Impulsamos tu Empresa",
-      "benefits": [
-        "Mejoramos tu conectividad para que tu equipo siempre esté en línea.",
-        "Fortalecemos tu seguridad con soluciones integradas de acceso y monitoreo.",
-        "Aseguramos continuidad operativa con soporte y mantenimiento proactivo.",
-        "Optimizamos tus recursos tecnológicos para mayor eficiencia y rentabilidad."
+    "consulting_services": {
+      "title": "Consultoría Estratégica",
+      "items": [
+        "Soluciones Web: desarrollo y optimización de sitios y plataformas digitales.",
+        "IoT: integración de dispositivos inteligentes para monitoreo y eficiencia.",
+        "Inteligencia Artificial: asesoría en adopción gradual de IA para procesos clave."
       ]
-    },
-    "how_we_work": {
-      "title": "Nuestro Proceso de Trabajo",
-      "steps": [
-        {"step": "Diagnóstico", "description": "Analizamos tu infraestructura actual y detectamos oportunidades de mejora."},
-        {"step": "Implementación", "description": "Diseñamos e instalamos soluciones personalizadas adaptadas a tu negocio."},
-        {"step": "Monitoreo & Optimización", "description": "Supervisamos y mejoramos continuamente tus sistemas para garantizar el máximo rendimiento."}
-      ]
-    },
-    "support_plans": {
-      "basico": {
-        "price": "$299/mes",
-        "features": [
-          "Soporte técnico remoto en horario laboral",
-          "Monitoreo básico de red",
-          "Tiempo de respuesta: 24 horas"
-        ]
+    }
+  },
+  "section_how_we_help": {
+    "title_how_we_help": "Cómo Impulsamos tu Empresa",
+    "benefits_how_we_help": [
+      "Mejoramos tu conectividad para que tu equipo siempre esté en línea.",
+      "Fortalecemos tu seguridad con soluciones integradas de acceso y monitoreo.",
+      "Aseguramos continuidad operativa con soporte y mantenimiento proactivo.",
+      "Optimizamos tus recursos tecnológicos para mayor eficiencia y rentabilidad."
+    ]
+  },
+  "section_how_we_work": {
+    "title_how_we_work": "Nuestro Proceso de Trabajo",
+    "steps_how_we_work": [
+      {
+        "step": "Diagnóstico",
+        "description": "Analizamos tu infraestructura actual y detectamos oportunidades de mejora."
       },
-      "plus": {
-        "price": "$599/mes",
-        "features": [
-          "Soporte extendido 6x12",
-          "Monitoreo avanzado de servidores y seguridad",
-          "Actualizaciones programadas",
-          "Tiempo de respuesta: 4 horas"
-        ]
+      {
+        "step": "Implementación",
+        "description": "Diseñamos e instalamos soluciones personalizadas adaptadas a tu negocio."
       },
-      "premium": {
-        "price": "$1,199/mes",
-        "features": [
-          "Soporte dedicado 24/7",
-          "Monitoreo completo + optimización proactiva",
-          "SLA con garantía prioritaria",
-          "Tiempo de respuesta: 1 hora"
-        ]
+      {
+        "step": "Monitoreo & Optimización",
+        "description": "Supervisamos y mejoramos continuamente tus sistemas para garantizar el máximo rendimiento."
       }
+    ]
+  },
+  "section_support_plans": {
+    "title_support_plans": "Support Plans",
+    "basico_support_plans": {
+      "price": "$299/mes",
+      "features": [
+        "Soporte técnico remoto en horario laboral",
+        "Monitoreo básico de red",
+        "Tiempo de respuesta: 24 horas"
+      ]
     },
-    "testimonials": [
+    "plus_support_plans": {
+      "price": "$599/mes",
+      "features": [
+        "Soporte extendido 6x12",
+        "Monitoreo avanzado de servidores y seguridad",
+        "Actualizaciones programadas",
+        "Tiempo de respuesta: 4 horas"
+      ]
+    },
+    "premium_support_plans": {
+      "price": "$1,199/mes",
+      "features": [
+        "Soporte dedicado 24/7",
+        "Monitoreo completo + optimización proactiva",
+        "SLA con garantía prioritaria",
+        "Tiempo de respuesta: 1 hora"
+      ]
+    }
+  },
+  "section_testimonials": {
+    "title_testimonials": "Testimonials",
+    "testimonials_testimonials": [
       {
         "quote": "Gracias a IPIngeniería mejoramos la seguridad y conectividad en todas nuestras sedes.",
         "author": "Carlos Macero, Jefe de Proyectos - ACHS"
@@ -111,18 +134,26 @@
         "quote": "La implementación de soluciones de IPIngeniería nos dio estabilidad y tranquilidad en la operación diaria.",
         "author": "Soledad Tapia, Gerente de Finanzas - Valencia Aceros SA"
       }
+    ]
+  },
+  "section_contact_form": {
+    "title_contact_form": "Contact Form",
+    "fields_contact_form": [
+      "Nombre Completo",
+      "Email Corporativo",
+      "Servicio de Interés",
+      "Mensaje"
+    ]
+  },
+  "section_footer": {
+    "title_footer": "Footer",
+    "tagline_footer": "Transformando empresas con soluciones TI confiables y soporte continuo.",
+    "quick_links_footer": [
+      "Servicios",
+      "Consultoría",
+      "Políticas de Privacidad",
+      "Contacto vía WhatsApp"
     ],
-    "contact_form": {
-      "fields": [
-        "Nombre Completo",
-        "Email Corporativo",
-        "Servicio de Interés",
-        "Mensaje"
-      ]
-    },
-    "footer": {
-      "tagline": "Transformando empresas con soluciones TI confiables y soporte continuo.",
-      "quick_links": ["Servicios", "Consultoría", "Políticas de Privacidad", "Contacto vía WhatsApp"],
-      "social_links": ["LinkedIn", "WhatsApp", "GitHub"]
-    }
+    "social_links_footer": ["LinkedIn", "WhatsApp", "GitHub"]
+  }
 }

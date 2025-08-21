@@ -37,9 +37,10 @@
 
 
 
+ng lint
 
-
-
+npx prettier --write src/main.ts
+ 
 
 # used prompt
 

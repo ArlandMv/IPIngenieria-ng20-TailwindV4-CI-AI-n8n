@@ -9,5 +9,4 @@ import { CommonModule } from '@angular/common';
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeroComponent {
-}
+export class HeroComponent {}
