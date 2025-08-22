@@ -9,9 +9,8 @@ describe('HeroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroComponent]
-    })
-    .compileComponents();
+      imports: [HeroComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeroComponent);
     component = fixture.componentInstance;
@@ -25,32 +24,44 @@ describe('HeroComponent', () => {
   it('should display the main heading', () => {
     // Checks if the main heading text is present in the template.
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('span')?.textContent).toContain('Soluciones de');
+    expect(compiled.querySelector('span')?.textContent).toContain(
+      'Soluciones de',
+    );
   });
 
   it('should display the description text', () => {
     // Checks if the description text is present in the template.
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('p.text-xl')?.textContent).toContain('Conectamos la ingeniería tradicional con la inteligencia artificial moderna para impulsar la transformación digital de empresas medianas en Latinoamérica.');
+    expect(compiled.querySelector('p.text-xl')?.textContent).toContain(
+      'Conectamos la ingeniería tradicional con la inteligencia artificial moderna para impulsar la transformación digital de empresas medianas en Latinoamérica.',
+    );
   });
 
-  it('should display the "Solicitar Cotización" button', () => {
-    // Checks if the "Solicitar Cotización" button is present and has the correct text and href.
-    const quoteButton = fixture.debugElement.query(By.css('a[href="#cotizacion"]'));
+  it('should display the "Solicitar Evaluación" button', () => {
+    // Checks if the "Solicitar Evaluación" button is present and has the correct text and href.
+    const quoteButton = fixture.debugElement.query(
+      By.css('a[href="#contacto"]'),
+    );
     expect(quoteButton).toBeTruthy();
-    expect(quoteButton.nativeElement.textContent).toContain('Solicitar Cotización');
+    expect(quoteButton.nativeElement.textContent).toContain(
+      'Solicitar Evaluación',
+    );
   });
 
   it('should display the "Ver Servicios" button', () => {
     // Checks if the "Ver Servicios" button is present and has the correct text and href.
-    const servicesButton = fixture.debugElement.query(By.css('a[href="#servicios"]'));
+    const servicesButton = fixture.debugElement.query(
+      By.css('a[href="#servicios"]'),
+    );
     expect(servicesButton).toBeTruthy();
     expect(servicesButton.nativeElement.textContent).toContain('Ver Servicios');
   });
 
   it('should display the hero image', () => {
     // Checks if the hero image is present with the correct alt text and src.
-    const heroImage = fixture.debugElement.query(By.css('img[alt="AI Solutions"]'));
+    const heroImage = fixture.debugElement.query(
+      By.css('img[alt="AI Solutions"]'),
+    );
     expect(heroImage).toBeTruthy();
     expect(heroImage.nativeElement.getAttribute('src')).toBe('hero-img.webp');
   });

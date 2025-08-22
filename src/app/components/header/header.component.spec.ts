@@ -9,9 +9,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderComponent]
-    })
-    .compileComponents();
+      imports: [HeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
@@ -24,26 +23,36 @@ describe('HeaderComponent', () => {
 
   it('should display the logo image', () => {
     // Checks if the logo image element is present in the template
-    const logoElement = fixture.debugElement.query(By.css('img[alt="IPIngeniería.net"]'));
+    const logoElement = fixture.debugElement.query(
+      By.css('img[alt="IPIngeniería.net"]'),
+    );
     expect(logoElement).toBeTruthy();
   });
 
   it('should have the correct number of navigation links for desktop', () => {
     // Checks if the correct number of navigation links for the desktop view are present.
-    const navLinks = fixture.debugElement.queryAll(By.css('.md\\:block.hidden a'));
+    const navLinks = fixture.debugElement.queryAll(
+      By.css('.md\\:block.hidden a'),
+    );
     expect(navLinks.length).toBe(5); // Assuming there are 4 navigation links + demo
   });
 
-  it('should have a "Solicitar Demo" button for desktop', () => {
-    // Checks if the "Solicitar Demo" button for the desktop view is present.
-    const demoButton = fixture.debugElement.query(By.css('.md\\:block.hidden a.bg-primary-500'));
+  it('should have a "Evaluación Gratuita" button for desktop', () => {
+    // Checks if the "Evaluación Gratuita" button for the desktop view is present.
+    const demoButton = fixture.debugElement.query(
+      By.css('.md\\:block.hidden a.bg-primary-500'),
+    );
     expect(demoButton).toBeTruthy();
-    expect(demoButton.nativeElement.textContent).toContain('Solicitar Demo');
+    expect(demoButton.nativeElement.textContent).toContain(
+      'Evaluación Gratuita',
+    );
   });
 
   it('should have a mobile menu button for mobile view', () => {
     // Checks if the mobile menu button is present in the template.
-    const mobileMenuButton = fixture.debugElement.query(By.css('.md\\:hidden button'));
+    const mobileMenuButton = fixture.debugElement.query(
+      By.css('.md\\:hidden button'),
+    );
     expect(mobileMenuButton).toBeTruthy();
   });
 });
