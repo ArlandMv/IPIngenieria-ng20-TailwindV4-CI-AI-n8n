@@ -34,11 +34,9 @@ export class ContactForm {
     message: ['', Validators.required],
   });
   */
-
   
   public loading = signal(false);
   public error = signal<string | null>(null);
-
 
   onSubmit() {
     if (this.contactForm.valid) {
