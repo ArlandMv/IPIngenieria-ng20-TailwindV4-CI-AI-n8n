@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  signal,
+  signal, inject,
   ElementRef,
   HostListener, ViewChild
 } from '@angular/core';
@@ -24,7 +24,7 @@ export class HeaderComponent  {
     { label: 'Consultoría', href: '#consulting-services' },
     { label: 'Contacto', href: '#contact' },
   ]);
-  constructor(private elementRef: ElementRef) {}
+  elementRef = inject(ElementRef);
 
   public toggleMobileMenu(): void {
     this.isMobileMenuOpen.set(!this.isMobileMenuOpen());
@@ -32,10 +32,8 @@ export class HeaderComponent  {
     //this.mobileMenuButton.nativeElement.setAttribute //('aria-expanded', this.isMobileMenuOpen().toString());
   }
 
-  @HostListener('document:keydown.escape', ['$event'])
-  onEscapeKey(event: Event): void { 
-    //'event' is defined but never used  
-    //KeyboardEvent is no assignable
+  @HostListener('document:keydown.escape')
+  onEscapeKey(): void {
     if (this.isMobileMenuOpen()) {
       this.toggleMobileMenu();
     }
