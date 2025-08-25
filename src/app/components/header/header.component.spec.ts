@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { provideRouter } from '@angular/router';
 import { routes } from '../../app.routes';
-import { By } from '@angular/platform-browser'; // Import By for querying elements
+import { By } from '@angular/platform-browser'; 
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -19,7 +19,6 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  // Common tests that apply to both mobile and desktop
   it('should create the component', () => {
     expect(component).toBeTruthy();
   });
@@ -50,7 +49,7 @@ describe('HeaderComponent', () => {
       const mobileMenu = fixture.nativeElement.querySelector(
         '.mobile-menu ',
       );
-      
+
       expect(mobileMenu).toBeTruthy();
       const computedStyle = getComputedStyle(mobileMenu);
 
