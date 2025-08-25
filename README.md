@@ -85,10 +85,11 @@ ng test
 ng test --no-watch --no-progress --browsers=ChromeHeadless
 ```
 
-**⚠️note:** for running tests in firebase studio we will to run the following commands:
-which chromium
-export CHROME_BIN=$(which chromium)
-echo "CHROME_BIN=${CHROME_BIN}"
+**⚠️note:** for running tests in firebase studio we will have to run the following commands:
+
+- which chromium
+- export CHROME_BIN=$(which chromium)
+- echo "CHROME_BIN=${CHROME_BIN}"
 
 ```bash
 export CHROME_BIN=$(which chromium)
