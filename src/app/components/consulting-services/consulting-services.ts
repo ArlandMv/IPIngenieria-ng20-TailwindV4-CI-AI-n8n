@@ -1,23 +1,52 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
+interface ConsultingService {
+  name: string;
+  description: string;
+  svgIdentifier: string;
+  learn_more: string;
+}
 
 @Component({
   selector: 'app-consulting-services',
   imports: [CommonModule],
   templateUrl: './consulting-services.html',
   styles: ``,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConsultingServices {
   title = 'Consultoría Estratégica';
-  items = [
-    'Soluciones Web: Desarrollo y Optimización de sitios y applicaciones digitales.',
-    'Internet de las cosas IoT: Integración de dispositivos inteligentes para monitoreo y eficiencia.',
-    'Inteligencia Artificial: Asesoría en adopción gradual de IA para procesos clave ML y LLMs.',
-  ];
-  learn_more = [
-    'Soluciones web modernas, desde e‑commerce hasta plataformas digitales, diseñadas para maximizar la conversión y ofrecer experiencias de usuario excepcionales. Incluye el desarrollo y optimización integral de sitios y sistemas adaptados a las necesidades y objetivos de cada proyecto.',
-    'Implementación de ecosistemas IoT que recopilan y analizan datos en tiempo real para mejorar la eficiencia, reducir costos y habilitar nuevas capacidades operativas. Incluye el diseño, integración y mantenimiento de dispositivos, sensores y plataformas conectadas, adaptadas a las necesidades y objetivos estratégicos de cada organización.',
-    'Diseño de un roadmap personalizado para la adopción de inteligencia artificial, incorporando automatización de procesos y optimización operacional. Asesoría estratégica para la implementación gradual de IA en procesos clave, impulsando eficiencia y transformación digital sostenible.',
+
+  //constructor(private sanitizer: DomSanitizer) {}
+  private sanitizer = inject(DomSanitizer);
+
+  consultingServices: ConsultingService[] = [
+    {
+      name: 'Soluciones Web',
+      description:
+        'Desarrollo y Optimización de sitios y applicaciones digitales.',
+      svgIdentifier: 'web',
+      learn_more:
+        'Soluciones web modernas, desde e‑commerce hasta plataformas digitales, diseñadas para maximizar la conversión y ofrecer experiencias de usuario excepcionales. Incluye el desarrollo y optimización integral de sitios y sistemas adaptados a las necesidades y objetivos de cada proyecto.',
+    },
+    {
+      name: 'Internet de las cosas IoT',
+      description:
+        'Integración de dispositivos inteligentes para monitoreo y eficiencia.',
+      svgIdentifier: 'iot',
+      learn_more:
+        'Implementación de ecosistemas IoT que recopilan y analizan datos en tiempo real para mejorar la eficiencia, reducir costos y habilitar nuevas capacidades operativas. Incluye el diseño, integración y mantenimiento de dispositivos, sensores y plataformas conectadas, adaptadas a las necesidades y objetivos estratégicos de cada organización.',
+    },
+    {
+      name: 'Inteligencia Artificial',
+      description:
+        'Asesoría en adopción gradual de IA para procesos clave ML y LLMs.',
+      svgIdentifier: 'ai',
+      learn_more:
+        'Diseño de un roadmap personalizado para la adopción de inteligencia artificial, incorporando automatización de procesos y optimización operacional. Asesoría estratégica para la implementación gradual de IA en procesos clave, impulsando eficiencia y transformación digital sostenible.',
+    },
   ];
 
   public itSvg = `
@@ -49,16 +78,18 @@ export class ConsultingServices {
  </svg>
  `;
 
-  getSvg(item: string): string {
-    if (item.includes('IoT')) {
-      return this.itSvg;
-    } else if (item.includes('Web')) {
-      return this.webSvg;
-    } else if (item.includes('Inteligencia Artificial')) {
-      return this.aiSvg;
-    }
-    return this.itSvg; // Return empty string or a default SVG if no match
+  svgMap: Record<string, string> = {
+    web: this.webSvg,
+    iot: this.itSvg,
+    ai: this.aiSvg,
+  };
+
+  getSvg(identifier: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(
+      this.svgMap[identifier] || this.itSvg,
+    );
   }
+
   // Optimization suggestion: For better performance with a large number of items,
   // consider pre-processing the 'items' array in the component's initialization
   // to include the appropriate SVG string directly in each item object. This avoids

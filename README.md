@@ -1,18 +1,19 @@
-# IPIngeniería.net Landing Page
+# IPIngeniería.cl Single Page Application (SPA)
 
-This project is a professional, responsive landing page for IPIngeniería.net, a Chilean engineering and IT consulting firm.
+This project is a professional, responsive Landing Page for better leads conversion. Its primary purpose is to serve as a dynamic and interactive landing page to showcase the company's IT services, expertise, and client testimonials, providing a clean user experience.
+
+## Project Overview
+
+This SPA aims to provide a comprehensive digital presence for IPIngeniería.cl. It is designed with a focus on performance, accessibility, and maintainability, utilizing modern web technologies to deliver a fast and engaging user interface.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
 
-## Development Strategy
-
-Our development strategy for this landing page followed an iterative approach, breaking down the project into smaller, manageable components. We adopted a Test-Driven Development (TDD) methodology, writing unit tests for each component before implementing the component's code. This approach helps ensure code quality and maintainability.
-
 ## Technologies Used
 
+**Frontend:**
 This project is built using the following technologies:
 
-- **Framework:** Angular 20+ - A powerful platform for building modern web applications.
+- **Framework:** Angular 20.1.4.+ - A powerful platform for building modern web applications.
 - **Language:** TypeScript - A typed superset of JavaScript that enhances code quality and maintainability.
 - **Styling:** Tailwind CSS - A utility-first CSS framework that enables rapid and efficient styling.
 - **Reactive Programming:** RxJS - A library for handling asynchronous data streams with observables.
@@ -21,6 +22,15 @@ This project is built using the following technologies:
 - **Unit Testing:** Jasmine & Karma - A combination of a testing framework and a test runner for comprehensive unit tests.
 - **E2E Testing Setup:** Puppeteer - A Node.js library used in the setup for end-to-end testing by providing control over Chrome or Chromium.
 
+**Backend (Conceptual/Future):**
+While the current application is primarily a frontend SPA, future iterations may involve a backend for enhanced features.
+
+**Database (Conceptual/Future):**
+A PostgreSQL database via Docker is being considered for persistent data storage in future updates.
+
+## Architecture
+
+The application follows a component-based architecture leveraging Angular. The project is structured into modular components, each responsible for a specific part of the user interface or application logic. Services are used to handle data fetching and business logic, promoting separation of concerns. Routing manages navigation between different sections of the SPA.
 graph BT
 A[Angular 20+] --> B[TypeScript]
 A --> C[RxJS]
@@ -116,7 +126,17 @@ The notification sound used in this application is from <a href="https://freesou
 
 ## Future updates
 
-Switch sweetalert for ngx-sweetalert2 to use ESM and treeshaking or try dynamic imports(lazyload)
+- Fix consultorias
+- Update favicon and title
+- Fix Section subtitles
+- Casos de Exito
+- Update logos (puntoIT)
+- Fix (impulsamos component): Card Styles
+- Client pictures
+- Update form reactive to callToAction Buttons
+- Animations
+- Accessibility
+- Optimize sweetalert2 (Switch sweetalert for ngx-sweetalert2 to use ESM and treeshaking or try dynamic imports(lazyload)
 
 ```typescript
 async showAlert() {

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 
 //type ServiceBlock = { title: string; items: string[] };
-interface  ServiceBlock { title: string; items: string[] };
+interface ServiceBlock {
+  title: string;
+  items: string[];
+}
 
 @Component({
   selector: 'app-services',
@@ -11,6 +14,7 @@ interface  ServiceBlock { title: string; items: string[] };
 })
 export class Services {
   sectionId = 'services';
+  subtitle = 'Infraestructura, seguridad y monitoreo para tu operación.';
   infraestructura_redes: ServiceBlock = {
     title: 'Infraestructura & Redes Confiables',
     items: [
@@ -49,7 +53,7 @@ export class Services {
       this.infraestructura_redes,
       this.seguridad_control,
       this.administracion_monitoreo,
-      this.soluciones_integradas
+      this.soluciones_integradas,
     ];
   }
 }

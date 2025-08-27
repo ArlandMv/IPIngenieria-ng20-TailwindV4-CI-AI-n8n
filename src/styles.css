@@ -111,3 +111,7 @@ h4 {
 .mobile-menu-item {
   @apply block rounded-md px-3 py-2 text-base font-medium text-gray-700 transition-colors hover:bg-gray-100 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-primary-400
 }
+
+.subtitle {
+  @apply mx-auto max-w-3xl text-xl text-gray-600 dark:text-gray-300
+}

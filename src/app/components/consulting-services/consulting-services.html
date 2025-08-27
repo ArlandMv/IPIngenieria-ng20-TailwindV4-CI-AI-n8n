@@ -10,34 +10,21 @@
     </div>
     <div class="grid gap-6 md:grid-cols-3">
       <!-- Consulting service items -->
-      @for (item of items; track item) {
+      @for (service of consultingServices; track service.name) {
         <article
           class="flex flex-col items-center rounded-xl border border-gray-200 bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
         >
-          
           <!-- Icon container -->
-          <!--div class="icon-container mb-4" [innerHtml]="getSvg(item)"-->
-          <div class="icon-container mb-4">
-            <svg
-            class="h-6 w-6 text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 11a1 1 0 112 0v1a1 1 0 11-2 0v-1zm1-5a1 1 0 100 2 1 1 0 000-2z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          </div>
-          <!-- Placeholder for icon - replace with actual icon if needed -->
+          <div
+            class="icon-container mb-4"
+            [innerHtml]="getSvg(service.svgIdentifier)"
+          ></div>
 
           <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-            {{ item.split(":")[0] }}
+            {{ service.name }}
           </h3>
           <p class="text-gray-600 first-letter:uppercase dark:text-gray-300">
-            {{ item.split(":").slice(1).join(":").trim() }}
+            {{ service.description }}
           </p>
         </article>
       }
