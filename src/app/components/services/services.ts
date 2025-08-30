@@ -15,6 +15,8 @@ interface ServiceBlock {
 export class Services {
   sectionId = 'services';
   subtitle = 'Infraestructura, seguridad y monitoreo para tu operación.';
+  subtitle2 =
+    'Soluciones personalizadas y proactivas para optimizar tu infraestructura tecnológica.';
   infraestructura_redes: ServiceBlock = {
     title: 'Infraestructura & Redes Confiables',
     items: [

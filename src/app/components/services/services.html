@@ -5,19 +5,20 @@
   <div class="mx-auto max-w-screen-xl px-4 py-12 lg:py-20">
     <div class="mb-8 text-center">
       <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
-        Servicios TI
+        <span class="text-primary-500"> Servicios TI </span> para tu empresa,
+        negocio o comunidad.
       </h2>
       <p class="subtitle mt-2">{{ subtitle }}</p>
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
       @for (block of blocks(); track block) {
         <article
-          class="rounded-lg border border-gray-200 bg-gray-50 p-6 shadow-sm hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
+          class="group flex-column relative flex h-full flex-wrap rounded-lg border border-gray-200 bg-gray-50 p-6 shadow-sm hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
         >
           <h3 class="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
             {{ block.title }}
           </h3>
-          <ul class="space-y-2">
+          <ul class="mb-8 space-y-2">
             @for (item of block.items; track item) {
               <li class="flex items-start">
                 <svg
@@ -34,12 +35,15 @@
                 <span class="text-gray-700 dark:text-gray-300">{{ item }}</span>
               </li>
             }
-            <a
-              href="#contact"
-              class="relative hidden rounded-lg bg-primary-500 px-8 py-3 text-right font-semibold text-white transition-colors hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700"
-              >más información</a
-            >
           </ul>
+          <!-- (click)="requestMoreInfo(service.title)"
+          class= absolute bottom-6 right-6  
+          -->
+          <a
+            href="#contact"
+            class="pointer-events-none absolute right-6 bottom-6 rounded-lg bg-primary-500 px-8 py-3 font-semibold text-white opacity-0 transition-opacity duration-300 ease-in-out group-hover:pointer-events-auto group-hover:opacity-100 hover:bg-primary-600"
+            >más información</a
+          >
         </article>
       }
     </div>

@@ -8,6 +8,9 @@ Based on the 'Future updates' list in README.md:
 - [x] Update favicon
 - [x] Fix Section subtitles
 - [ ] Casos de Exito - Started refactoring the `Testimonials` component to display a list of success cases dynamically, but encountered an error when trying to update the `testimonials.html` template. Manual intervention is required to implement the @for loop and display the success cases.
+- [ ] feat (call to action buttons): using signals to update the dom faster.
+- [ ] Update (hero): sales pitch.
+- [ ] Update (clients): Add "casos de exito" with sweet alert.
 - [ ] Fix (impulsamos component): Card Styles
 - [ ] Update logos (puntoIT)
 - [ ] Client pictures
